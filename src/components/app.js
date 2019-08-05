@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className='app'>
-        <h1>DevCamp React Starter</h1>
-        <h2>React Redux Router</h2>
-      </div>
-    );
-  }
-}
+import NavBar from "./navigation/navbar";
+
+const App = () => {
+  return (
+    <div className="app">
+
+      <NavBar />
+
+    </div>
+  );
+};
+
+export default App;

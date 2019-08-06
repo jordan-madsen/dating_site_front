@@ -1,12 +1,11 @@
 import React from "react";
 import DropzoneComponent from "react-dropzone-component";
 import request from "superagent";
-import { navigate } from "hookrouter";
 
 import "../../node_modules/react-dropzone-component/styles/filepicker.css";
 import "../../node_modules/dropzone/dist/min/dropzone.min.css";
 
-const CardForm = () => {
+const CardForm = props => {
   const [text, setText] = React.useState("");
   const [favorite, setFavorite] = React.useState(false);
   const [image, setImage] = React.useState("");
@@ -103,34 +102,42 @@ const CardForm = () => {
 
   return (
     <div className="card-form">
-      <h1>Add a card</h1>
+      <div className="form-add-card">
+        <h1>ADD CARD</h1>
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        <DropzoneComponent
-          ref={imageRef}
-          config={componentConfig()}
-          djsConfig={djsConfig()}
-          eventHandlers={handleDrop()}
-        >
-          Drop Your card
-        </DropzoneComponent>
-        <input
-          type="text"
-          placeholder="caption"
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
+      <div className="card-wrapper">
+        <form onSubmit={handleSubmit} className="form">
+          <div className="dropzone-wrapper">
+            <DropzoneComponent
+              ref={imageRef}
+              config={componentConfig()}
+              djsConfig={djsConfig()}
+              eventHandlers={handleDrop()}
+            >
+              Drop Your card
+            </DropzoneComponent>
+          </div>
+          <div className="interactives-wrapper">
+            <input
+              type="text"
+              placeholder="caption"
+              value={text}
+              onChange={e => setText(e.target.value)}
+            />
 
-        <div className="checkbox">
-          <input
-            type="checkbox"
-            checked={favorite}
-            onChange={() => setFavorite(!favorite)}
-          />
-          <span>Favorite?</span>
-        </div>
-        <button type="submit">POST card</button>
-      </form>
+            <div className="checkbox">
+              <input
+                type="checkbox"
+                checked={favorite}
+                onChange={() => setFavorite(!favorite)}
+              />
+              <span>Favorite?</span>
+            </div>
+            <button type="submit">POST CARD</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import {
 import Logo from "../../../static/images/logos/circular-logic-logo.jpg";
 
 import Home from "../pages/home";
+import CardForm from "../infoForm";
 
 const NavBar = () => {
   return (
@@ -35,19 +36,13 @@ const NavBar = () => {
                   </Link>
                 </div>
                 <div className="link-wrapper">
-                  <Link exact to="/">
-                    LINK
-                  </Link>
+                  <Link to="/form">FORM</Link>
                 </div>
                 <div className="link-wrapper">
-                  <Link exact to="/">
-                    CONTACT
-                  </Link>
+                  <Link to="/">CONTACT</Link>
                 </div>
                 <div className="link-wrapper">
-                  <Link exact to="/">
-                    LOGIN
-                  </Link>
+                  <Link to="/">LOGIN</Link>
                 </div>
               </div>
             </div>
@@ -56,6 +51,7 @@ const NavBar = () => {
 
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/form" component={CardForm} />
         </Switch>
         <div className="footer-wrapper">
           <div className="links-wrapper">
@@ -65,19 +61,13 @@ const NavBar = () => {
               </Link>
             </div>
             <div className="link-wrapper">
-              <Link exact to="/">
-                LINK
-              </Link>
+              <Link to="/form">FORM</Link>
             </div>
             <div className="link-wrapper">
-              <Link exact to="/">
-                CONTACT
-              </Link>
+              <Link to="/">CONTACT</Link>
             </div>
             <div className="link-wrapper">
-              <Link exact to="/">
-                LOGIN
-              </Link>
+              <Link to="/">LOGIN</Link>
             </div>
           </div>
           <div className="copyright-wrapper">

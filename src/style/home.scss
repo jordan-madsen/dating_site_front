@@ -1,5 +1,5 @@
 .home-page-container {
-  height: auto;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   }
 
   .cards-container {
-    height: 500px;
+    height: 100%;
     width: 70%;
     margin-bottom: 70px;
     display: grid;

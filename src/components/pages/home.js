@@ -45,8 +45,9 @@ const Home = () => {
       <div className="dates-wrapper">
         <h1>Your Dates</h1>
       </div>
-      {renderCards()}
+
       <div className="cards-container">
+        {renderCards()}
         <Card />
       </div>
     </div>

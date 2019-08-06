@@ -18,7 +18,7 @@ const Card = props => {
           />
         ) : null}
         <button onClick={() => props.deletecard(props.id)}>DEL</button>
-        <button onClick={() => props.editcard(props.id)}>Edit</button>
+        <button onClick={() => props.editcard(props.id)}>EDIT</button>
       </div>
     </div>
   );

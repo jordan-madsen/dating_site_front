@@ -10,6 +10,8 @@ import Logo from "../../../static/images/logos/circular-logic-logo.jpg";
 
 import Home from "../pages/home";
 import CardForm from "../infoForm";
+import Contact from "../pages/contact";
+import Auth from "../pages/login";
 
 const NavBar = () => {
   return (
@@ -39,10 +41,10 @@ const NavBar = () => {
                   <Link to="/form">FORM</Link>
                 </div>
                 <div className="link-wrapper">
-                  <Link to="/">CONTACT</Link>
+                  <Link to="/contact">CONTACT</Link>
                 </div>
                 <div className="link-wrapper">
-                  <Link to="/">LOGIN</Link>
+                  <Link to="/auth">LOGIN</Link>
                 </div>
               </div>
             </div>
@@ -52,6 +54,8 @@ const NavBar = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/form" component={CardForm} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/auth" component={Auth} />
         </Switch>
         <div className="footer-wrapper">
           <div className="links-wrapper">
@@ -64,10 +68,10 @@ const NavBar = () => {
               <Link to="/form">FORM</Link>
             </div>
             <div className="link-wrapper">
-              <Link to="/">CONTACT</Link>
+              <Link to="/contact">CONTACT</Link>
             </div>
             <div className="link-wrapper">
-              <Link to="/">LOGIN</Link>
+              <Link to="/auth">LOGIN</Link>
             </div>
           </div>
           <div className="copyright-wrapper">

@@ -20,8 +20,6 @@ const Card = props => {
 
         <button onClick={() => props.deletCard(props.id)}>DEL</button>
         <button onClick={() => props.editCard(props.id)}>Edit</button>
-
-
       </div>
     </div>
   );

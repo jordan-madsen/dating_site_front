@@ -6,8 +6,8 @@ const Card = props => {
   return (
     <div className="card">
       <div className="image-wrapper">
-        {/* <img src={props.image} alt="Card" /> */}
-        <img src={Skyrim} />
+        <img src={props.image} alt="Card" />
+        {/*<img src={Skyrim} />*/}
       </div>
       <div className="text-wrapper">
         <p>{props.text}</p>

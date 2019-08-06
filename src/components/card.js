@@ -23,7 +23,7 @@ const Card = props => {
       </div>
 
       <div className="button-wrapper">
-        <button onClick={() => props.deletCard(props.id)}>DEL</button>
+        <button onClick={() => props.deleteCard(props.id)}>DEL</button>
         <button onClick={() => props.editCard(props.id)}>Edit</button>
       </div>
     </div>

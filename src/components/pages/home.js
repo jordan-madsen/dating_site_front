@@ -1,49 +1,50 @@
 import React from "react";
 
-import Meme from "../card";
+import Card from "../card";
 
 const Home = () => {
-  const [memes, setMemes] = React.useState([]);
+  const [cards, setCards] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/memes")
+    fetch("http://localhost:5000/cards")
       .then(response => response.json())
-      .then(data => setMemes(data))
+      .then(data => setCards(data))
       .catch(error => console.log(error));
   }, []);
 
-  const deleteMeme = id => {
-    fetch(`http://localhost:5000/meme/${id}`, {
+  const deleteCard = id => {
+    fetch(`http://localhost:5000/card/${id}`, {
       method: "DELETE"
     })
-      .then(setMemes(memes.filter(meme => meme.id !== id)))
+      .then(setCards(cards.filter(card => card.id !== id)))
       .catch(error => console.log("delete err", error));
   };
 
-  const editMeme = id => {
+  const editCard = id => {
     navigate(`/form/${id}`);
   };
 
-  const renderMemes = () => {
-    return memes.map(meme => {
+  const renderCards = () => {
+    return cards.map(card => {
       return (
-        <Meme
-          key={meme.id}
-          id={meme.id}
-          text={meme.text}
-          image={meme.image}
-          favorite={meme.favorite}
-          deleteMeme={deleteMeme}
-          editMeme={editMeme}
+        <Card
+          key={card.id}
+          id={card.id}
+          text={card.text}
+          image={card.image}
+          favorite={card.favorite}
+          deleteCard={deleteCard}
+          editCard={editCard}
         />
       );
     });
   };
+
   return (
     <div className="home-page-container">
-      <h1>MEMES!</h1>
-      {renderMemes()}
-      <Meme />
+      <h1>Your Dates</h1>
+      {renderCards()}
+      <Card />
     </div>
   );
 };

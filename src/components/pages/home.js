@@ -46,10 +46,7 @@ const Home = () => {
         <h1>Your Dates</h1>
       </div>
 
-      <div className="cards-container">
-        {renderCards()}
-        <Card />
-      </div>
+      <div className="cards-container">{renderCards()}</div>
     </div>
   );
 };

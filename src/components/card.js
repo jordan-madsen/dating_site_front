@@ -1,10 +1,13 @@
 import React from "react";
 
+import Skyrim from "../../static/images/Other/SkyrimFeel.jpg";
+
 const Card = props => {
   return (
     <div className="card">
       <div className="image-wrapper">
-        <img src={props.image} alt="Card" />
+        {/* <img src={props.image} alt="Card" /> */}
+        <img src={Skyrim} />
       </div>
       <div className="text-wrapper">
         <p>{props.text}</p>
@@ -17,11 +20,11 @@ const Card = props => {
             alt="Star"
           />
         ) : null}
+      </div>
 
+      <div className="button-wrapper">
         <button onClick={() => props.deletCard(props.id)}>DEL</button>
         <button onClick={() => props.editCard(props.id)}>Edit</button>
-
-
       </div>
     </div>
   );

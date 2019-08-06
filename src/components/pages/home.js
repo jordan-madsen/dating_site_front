@@ -42,9 +42,13 @@ const Home = () => {
 
   return (
     <div className="home-page-container">
-      <h1>Your Dates</h1>
+      <div className="dates-wrapper">
+        <h1>Your Dates</h1>
+      </div>
       {renderCards()}
-      <Card />
+      <div className="cards-container">
+        <Card />
+      </div>
     </div>
   );
 };

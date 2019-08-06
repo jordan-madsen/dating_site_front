@@ -114,14 +114,12 @@ const CardForm = props => {
               config={componentConfig()}
               djsConfig={djsConfig()}
               eventHandlers={handleDrop()}
-            >
-              Drop Your card
-            </DropzoneComponent>
+            />
           </div>
           <div className="interactives-wrapper">
             <input
               type="text"
-              placeholder="caption"
+              placeholder="What would you like to say?"
               value={text}
               onChange={e => setText(e.target.value)}
             />
